@@ -8,7 +8,25 @@
 	"CF": {
 		"Target": "https://api.cf.us10-001.hana.ondemand.com",
 		"Organization": "8a063d3b-e7c1-4139-aa19-9752ff085e8d",
-		"Space": "5a24e99a-e876-4eb0-9088-aaa6174019fd"
+		"Space": "5a24e99a-e876-4eb0-9088-aaa6174019fd",
+		"Deploy": {
+			"Destination": [
+				{
+					"CF": "com.sap.edm.sampleservice.v4",
+					"MDK": "com.sap.edm.sampleservice.v4",
+					"URL": ""
+				}
+			],
+			"Name": "apps.dflc.mdk.DemoApp",
+			"Version": "1.0.0",
+			"AppRouter": "standalone",
+			"WebClient": {
+				"Runtime": "production",
+				"URL": "https://mdk-webclient-runtime.cfapps.us10.hana.ondemand.com/runtime/"
+			},
+			"Auth": true,
+			"URL": "https://geral-dev-appsdflcmdkdemoapp-approuter.cfapps.us10-001.hana.ondemand.com/appsdflcmdkDemoApp"
+		}
 	},
 	"MobileService": {
 		"Type": "standard",

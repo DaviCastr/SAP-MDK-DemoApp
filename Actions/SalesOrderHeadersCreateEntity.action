@@ -1,0 +1,35 @@
+{
+	"_Type": "Action.Type.ODataService.CreateRelatedEntity",
+	"ActionResult": {
+		"_Name": "SalesOrderHeadersCreateEntity"
+	},
+	"OnFailure": {
+		"Name": "/DemoApp/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "Failed to Create Sales Order record - {#ActionResults:SalesOrderHeadersCreateEntity/error}",
+			"Title": "Create Sales Order",
+			"OKCaption": "OK"
+		}
+	},
+	"OnSuccess": "/DemoApp/Actions/CloseModalPage_Complete.action",
+	"Target": {
+		"Service": "/DemoApp/Services/com_sap_edm_sampleservice_v4.service",
+		"EntitySet": "SalesOrderHeaders"
+	},
+	"ParentLink": {
+		"Target": {
+			"EntitySet": "Customers",
+			"ReadLink": "{@odata.readLink}"
+		},
+		"Property": "SalesOrders"
+	},
+	"Properties": {
+		"CreatedAt": "#Page:OrderCreate/#Control:FCCreatedate/#Value",
+		"CurrencyCode": "#Page:OrderCreate/#Control:FCCreateCurrencyCode/#Value",
+		"GrossAmount": "#Page:OrderCreate/#Control:FCCreateGrossAmount/#Value",
+		"LifeCycleStatus": "#Page:OrderCreate/#Control:FCCreateLifeCycleStatus/#Value",
+		"LifeCycleStatusName": "#Page:OrderCreate/#Control:FCCreateLifeCycleStatusName/#Value",
+		"NetAmount": "#Page:OrderCreate/#Control:FCCreateNetAmount/#Value",
+		"TaxAmount": "#Page:OrderCreate/#Control:FCCreateTaxAmount/#Value"
+	}
+}

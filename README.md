@@ -14,7 +14,7 @@ O que mais me chamou atenção no SAP MDK é a abordagem low-code/controlada por
 Para quem atua com BTP, CAP ou integrações OData, é uma stack que amplia bastante as possibilidades no cenário mobile.
 
 📚 Tutorial utilizado:
-https://lnkd.in/dimdJ5V8
+https://developers.sap.com/mission.mobile-dev-kit-enhance.html
 
 
 #SAPMDK 

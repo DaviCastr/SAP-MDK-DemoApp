@@ -1,4 +1,14 @@
-/******/ (() => { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else {
+		var a = factory();
+		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+	}
+})(this, () => {
+return /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./build.definitions/DemoApp/i18n/i18n.properties":
@@ -43,7 +53,12 @@ let demoapp_actions_com_sap_edm_sampleservice_v4_service_initializeofflinefailur
 let demoapp_actions_com_sap_edm_sampleservice_v4_service_syncfailuremessage_action = __webpack_require__(/*! ./DemoApp/Actions/com_sap_edm_sampleservice_v4/Service/SyncFailureMessage.action */ "./build.definitions/DemoApp/Actions/com_sap_edm_sampleservice_v4/Service/SyncFailureMessage.action")
 let demoapp_actions_com_sap_edm_sampleservice_v4_service_syncstartedmessage_action = __webpack_require__(/*! ./DemoApp/Actions/com_sap_edm_sampleservice_v4/Service/SyncStartedMessage.action */ "./build.definitions/DemoApp/Actions/com_sap_edm_sampleservice_v4/Service/SyncStartedMessage.action")
 let demoapp_actions_com_sap_edm_sampleservice_v4_service_uploadoffline_action = __webpack_require__(/*! ./DemoApp/Actions/com_sap_edm_sampleservice_v4/Service/UploadOffline.action */ "./build.definitions/DemoApp/Actions/com_sap_edm_sampleservice_v4/Service/UploadOffline.action")
+let demoapp_actions_createcustomerentityfailuremessage_action = __webpack_require__(/*! ./DemoApp/Actions/CreateCustomerEntityFailureMessage.action */ "./build.definitions/DemoApp/Actions/CreateCustomerEntityFailureMessage.action")
+let demoapp_actions_customerdelete_action = __webpack_require__(/*! ./DemoApp/Actions/CustomerDelete.action */ "./build.definitions/DemoApp/Actions/CustomerDelete.action")
+let demoapp_actions_customerscreateentity_action = __webpack_require__(/*! ./DemoApp/Actions/CustomersCreateEntity.action */ "./build.definitions/DemoApp/Actions/CustomersCreateEntity.action")
+let demoapp_actions_customersdeleteentity_action = __webpack_require__(/*! ./DemoApp/Actions/CustomersDeleteEntity.action */ "./build.definitions/DemoApp/Actions/CustomersDeleteEntity.action")
 let demoapp_actions_customersupdateentity_action = __webpack_require__(/*! ./DemoApp/Actions/CustomersUpdateEntity.action */ "./build.definitions/DemoApp/Actions/CustomersUpdateEntity.action")
+let demoapp_actions_deletecustomerentityfailuremessage_action = __webpack_require__(/*! ./DemoApp/Actions/DeleteCustomerEntityFailureMessage.action */ "./build.definitions/DemoApp/Actions/DeleteCustomerEntityFailureMessage.action")
 let demoapp_actions_errorarchive_errorarchive_syncfailure_action = __webpack_require__(/*! ./DemoApp/Actions/ErrorArchive/ErrorArchive_SyncFailure.action */ "./build.definitions/DemoApp/Actions/ErrorArchive/ErrorArchive_SyncFailure.action")
 let demoapp_actions_errorarchive_navtoerrorarchive_detail_action = __webpack_require__(/*! ./DemoApp/Actions/ErrorArchive/NavToErrorArchive_Detail.action */ "./build.definitions/DemoApp/Actions/ErrorArchive/NavToErrorArchive_Detail.action")
 let demoapp_actions_errorarchive_navtoerrorarchive_list_action = __webpack_require__(/*! ./DemoApp/Actions/ErrorArchive/NavToErrorArchive_List.action */ "./build.definitions/DemoApp/Actions/ErrorArchive/NavToErrorArchive_List.action")
@@ -58,6 +73,8 @@ let demoapp_actions_logging_uploadlogprogress_action = __webpack_require__(/*! .
 let demoapp_actions_navtocustomer_action = __webpack_require__(/*! ./DemoApp/Actions/NavToCustomer.action */ "./build.definitions/DemoApp/Actions/NavToCustomer.action")
 let demoapp_actions_navtocustomeredit_action = __webpack_require__(/*! ./DemoApp/Actions/NavToCustomerEdit.action */ "./build.definitions/DemoApp/Actions/NavToCustomerEdit.action")
 let demoapp_actions_navtocustomers_action = __webpack_require__(/*! ./DemoApp/Actions/NavToCustomers.action */ "./build.definitions/DemoApp/Actions/NavToCustomers.action")
+let demoapp_actions_navtocustomerscreate_action = __webpack_require__(/*! ./DemoApp/Actions/NavToCustomersCreate.action */ "./build.definitions/DemoApp/Actions/NavToCustomersCreate.action")
+let demoapp_actions_salesorderheaderscreateentity_action = __webpack_require__(/*! ./DemoApp/Actions/SalesOrderHeadersCreateEntity.action */ "./build.definitions/DemoApp/Actions/SalesOrderHeadersCreateEntity.action")
 let demoapp_actions_updatecustomerentityfailuremessage_action = __webpack_require__(/*! ./DemoApp/Actions/UpdateCustomerEntityFailureMessage.action */ "./build.definitions/DemoApp/Actions/UpdateCustomerEntityFailureMessage.action")
 let demoapp_actions_validationfailure_action = __webpack_require__(/*! ./DemoApp/Actions/ValidationFailure.action */ "./build.definitions/DemoApp/Actions/ValidationFailure.action")
 let demoapp_globals_application_appdefinition_version_global = __webpack_require__(/*! ./DemoApp/Globals/Application/AppDefinition_Version.global */ "./build.definitions/DemoApp/Globals/Application/AppDefinition_Version.global")
@@ -70,11 +87,15 @@ let demoapp_pages_application_about_page = __webpack_require__(/*! ./DemoApp/Pag
 let demoapp_pages_application_support_page = __webpack_require__(/*! ./DemoApp/Pages/Application/Support.page */ "./build.definitions/DemoApp/Pages/Application/Support.page")
 let demoapp_pages_application_useractivitylog_page = __webpack_require__(/*! ./DemoApp/Pages/Application/UserActivityLog.page */ "./build.definitions/DemoApp/Pages/Application/UserActivityLog.page")
 let demoapp_pages_customer_page = __webpack_require__(/*! ./DemoApp/Pages/Customer.page */ "./build.definitions/DemoApp/Pages/Customer.page")
+let demoapp_pages_customercreate_page = __webpack_require__(/*! ./DemoApp/Pages/CustomerCreate.page */ "./build.definitions/DemoApp/Pages/CustomerCreate.page")
 let demoapp_pages_customeredit_page = __webpack_require__(/*! ./DemoApp/Pages/CustomerEdit.page */ "./build.definitions/DemoApp/Pages/CustomerEdit.page")
+let demoapp_pages_customerorder_page = __webpack_require__(/*! ./DemoApp/Pages/CustomerOrder.page */ "./build.definitions/DemoApp/Pages/CustomerOrder.page")
+let demoapp_pages_customerorders_page = __webpack_require__(/*! ./DemoApp/Pages/CustomerOrders.page */ "./build.definitions/DemoApp/Pages/CustomerOrders.page")
 let demoapp_pages_customers_page = __webpack_require__(/*! ./DemoApp/Pages/Customers.page */ "./build.definitions/DemoApp/Pages/Customers.page")
 let demoapp_pages_errorarchive_errorarchive_detail_page = __webpack_require__(/*! ./DemoApp/Pages/ErrorArchive/ErrorArchive_Detail.page */ "./build.definitions/DemoApp/Pages/ErrorArchive/ErrorArchive_Detail.page")
 let demoapp_pages_errorarchive_errorarchive_list_page = __webpack_require__(/*! ./DemoApp/Pages/ErrorArchive/ErrorArchive_List.page */ "./build.definitions/DemoApp/Pages/ErrorArchive/ErrorArchive_List.page")
 let demoapp_pages_main_page = __webpack_require__(/*! ./DemoApp/Pages/Main.page */ "./build.definitions/DemoApp/Pages/Main.page")
+let demoapp_pages_ordercreate_page = __webpack_require__(/*! ./DemoApp/Pages/OrderCreate.page */ "./build.definitions/DemoApp/Pages/OrderCreate.page")
 let demoapp_rules_application_appupdatefailure_js = __webpack_require__(/*! ./DemoApp/Rules/Application/AppUpdateFailure.js */ "./build.definitions/DemoApp/Rules/Application/AppUpdateFailure.js")
 let demoapp_rules_application_appupdatesuccess_js = __webpack_require__(/*! ./DemoApp/Rules/Application/AppUpdateSuccess.js */ "./build.definitions/DemoApp/Rules/Application/AppUpdateSuccess.js")
 let demoapp_rules_application_clientismultiusermode_js = __webpack_require__(/*! ./DemoApp/Rules/Application/ClientIsMultiUserMode.js */ "./build.definitions/DemoApp/Rules/Application/ClientIsMultiUserMode.js")
@@ -83,6 +104,8 @@ let demoapp_rules_application_getclientversion_js = __webpack_require__(/*! ./De
 let demoapp_rules_application_onwillupdate_js = __webpack_require__(/*! ./DemoApp/Rules/Application/OnWillUpdate.js */ "./build.definitions/DemoApp/Rules/Application/OnWillUpdate.js")
 let demoapp_rules_application_resetappsettingsandlogout_js = __webpack_require__(/*! ./DemoApp/Rules/Application/ResetAppSettingsAndLogout.js */ "./build.definitions/DemoApp/Rules/Application/ResetAppSettingsAndLogout.js")
 let demoapp_rules_com_sap_edm_sampleservice_v4_errorarchive_checkforsyncerror_js = __webpack_require__(/*! ./DemoApp/Rules/com_sap_edm_sampleservice_v4/ErrorArchive_CheckForSyncError.js */ "./build.definitions/DemoApp/Rules/com_sap_edm_sampleservice_v4/ErrorArchive_CheckForSyncError.js")
+let demoapp_rules_customerordercount_js = __webpack_require__(/*! ./DemoApp/Rules/CustomerOrderCount.js */ "./build.definitions/DemoApp/Rules/CustomerOrderCount.js")
+let demoapp_rules_customersdeleteconfirmation_js = __webpack_require__(/*! ./DemoApp/Rules/CustomersDeleteConfirmation.js */ "./build.definitions/DemoApp/Rules/CustomersDeleteConfirmation.js")
 let demoapp_rules_emailvalidation_js = __webpack_require__(/*! ./DemoApp/Rules/EmailValidation.js */ "./build.definitions/DemoApp/Rules/EmailValidation.js")
 let demoapp_rules_logging_loglevels_js = __webpack_require__(/*! ./DemoApp/Rules/Logging/LogLevels.js */ "./build.definitions/DemoApp/Rules/Logging/LogLevels.js")
 let demoapp_rules_logging_settracecategories_js = __webpack_require__(/*! ./DemoApp/Rules/Logging/SetTraceCategories.js */ "./build.definitions/DemoApp/Rules/Logging/SetTraceCategories.js")
@@ -93,10 +116,9 @@ let demoapp_rules_logging_userlogsetting_js = __webpack_require__(/*! ./DemoApp/
 let demoapp_rules_service_initialize_js = __webpack_require__(/*! ./DemoApp/Rules/Service/Initialize.js */ "./build.definitions/DemoApp/Rules/Service/Initialize.js")
 let demoapp_services_com_sap_edm_sampleservice_v4_service = __webpack_require__(/*! ./DemoApp/Services/com_sap_edm_sampleservice_v4.service */ "./build.definitions/DemoApp/Services/com_sap_edm_sampleservice_v4.service")
 let demoapp_styles_styles_css = __webpack_require__(/*! ./DemoApp/Styles/Styles.css */ "./build.definitions/DemoApp/Styles/Styles.css")
+let demoapp_styles_styles_json = __webpack_require__(/*! ./DemoApp/Styles/Styles.json */ "./build.definitions/DemoApp/Styles/Styles.json")
 let demoapp_styles_styles_less = __webpack_require__(/*! ./DemoApp/Styles/Styles.less */ "./build.definitions/DemoApp/Styles/Styles.less")
-let demoapp_styles_styles_light_css = __webpack_require__(/*! ./DemoApp/Styles/Styles.light.css */ "./build.definitions/DemoApp/Styles/Styles.light.css")
-let demoapp_styles_styles_light_json = __webpack_require__(/*! ./DemoApp/Styles/Styles.light.json */ "./build.definitions/DemoApp/Styles/Styles.light.json")
-let demoapp_styles_styles_light_nss = __webpack_require__(/*! ./DemoApp/Styles/Styles.light.nss */ "./build.definitions/DemoApp/Styles/Styles.light.nss")
+let demoapp_styles_styles_nss = __webpack_require__(/*! ./DemoApp/Styles/Styles.nss */ "./build.definitions/DemoApp/Styles/Styles.nss")
 let tsconfig_json = __webpack_require__(/*! ./tsconfig.json */ "./build.definitions/tsconfig.json")
 let version_mdkbundlerversion = __webpack_require__(/*! ./version.mdkbundlerversion */ "./build.definitions/version.mdkbundlerversion")
 
@@ -127,7 +149,12 @@ module.exports = {
 	demoapp_actions_com_sap_edm_sampleservice_v4_service_syncfailuremessage_action : demoapp_actions_com_sap_edm_sampleservice_v4_service_syncfailuremessage_action,
 	demoapp_actions_com_sap_edm_sampleservice_v4_service_syncstartedmessage_action : demoapp_actions_com_sap_edm_sampleservice_v4_service_syncstartedmessage_action,
 	demoapp_actions_com_sap_edm_sampleservice_v4_service_uploadoffline_action : demoapp_actions_com_sap_edm_sampleservice_v4_service_uploadoffline_action,
+	demoapp_actions_createcustomerentityfailuremessage_action : demoapp_actions_createcustomerentityfailuremessage_action,
+	demoapp_actions_customerdelete_action : demoapp_actions_customerdelete_action,
+	demoapp_actions_customerscreateentity_action : demoapp_actions_customerscreateentity_action,
+	demoapp_actions_customersdeleteentity_action : demoapp_actions_customersdeleteentity_action,
 	demoapp_actions_customersupdateentity_action : demoapp_actions_customersupdateentity_action,
+	demoapp_actions_deletecustomerentityfailuremessage_action : demoapp_actions_deletecustomerentityfailuremessage_action,
 	demoapp_actions_errorarchive_errorarchive_syncfailure_action : demoapp_actions_errorarchive_errorarchive_syncfailure_action,
 	demoapp_actions_errorarchive_navtoerrorarchive_detail_action : demoapp_actions_errorarchive_navtoerrorarchive_detail_action,
 	demoapp_actions_errorarchive_navtoerrorarchive_list_action : demoapp_actions_errorarchive_navtoerrorarchive_list_action,
@@ -142,6 +169,8 @@ module.exports = {
 	demoapp_actions_navtocustomer_action : demoapp_actions_navtocustomer_action,
 	demoapp_actions_navtocustomeredit_action : demoapp_actions_navtocustomeredit_action,
 	demoapp_actions_navtocustomers_action : demoapp_actions_navtocustomers_action,
+	demoapp_actions_navtocustomerscreate_action : demoapp_actions_navtocustomerscreate_action,
+	demoapp_actions_salesorderheaderscreateentity_action : demoapp_actions_salesorderheaderscreateentity_action,
 	demoapp_actions_updatecustomerentityfailuremessage_action : demoapp_actions_updatecustomerentityfailuremessage_action,
 	demoapp_actions_validationfailure_action : demoapp_actions_validationfailure_action,
 	demoapp_globals_application_appdefinition_version_global : demoapp_globals_application_appdefinition_version_global,
@@ -154,11 +183,15 @@ module.exports = {
 	demoapp_pages_application_support_page : demoapp_pages_application_support_page,
 	demoapp_pages_application_useractivitylog_page : demoapp_pages_application_useractivitylog_page,
 	demoapp_pages_customer_page : demoapp_pages_customer_page,
+	demoapp_pages_customercreate_page : demoapp_pages_customercreate_page,
 	demoapp_pages_customeredit_page : demoapp_pages_customeredit_page,
+	demoapp_pages_customerorder_page : demoapp_pages_customerorder_page,
+	demoapp_pages_customerorders_page : demoapp_pages_customerorders_page,
 	demoapp_pages_customers_page : demoapp_pages_customers_page,
 	demoapp_pages_errorarchive_errorarchive_detail_page : demoapp_pages_errorarchive_errorarchive_detail_page,
 	demoapp_pages_errorarchive_errorarchive_list_page : demoapp_pages_errorarchive_errorarchive_list_page,
 	demoapp_pages_main_page : demoapp_pages_main_page,
+	demoapp_pages_ordercreate_page : demoapp_pages_ordercreate_page,
 	demoapp_rules_application_appupdatefailure_js : demoapp_rules_application_appupdatefailure_js,
 	demoapp_rules_application_appupdatesuccess_js : demoapp_rules_application_appupdatesuccess_js,
 	demoapp_rules_application_clientismultiusermode_js : demoapp_rules_application_clientismultiusermode_js,
@@ -167,6 +200,8 @@ module.exports = {
 	demoapp_rules_application_onwillupdate_js : demoapp_rules_application_onwillupdate_js,
 	demoapp_rules_application_resetappsettingsandlogout_js : demoapp_rules_application_resetappsettingsandlogout_js,
 	demoapp_rules_com_sap_edm_sampleservice_v4_errorarchive_checkforsyncerror_js : demoapp_rules_com_sap_edm_sampleservice_v4_errorarchive_checkforsyncerror_js,
+	demoapp_rules_customerordercount_js : demoapp_rules_customerordercount_js,
+	demoapp_rules_customersdeleteconfirmation_js : demoapp_rules_customersdeleteconfirmation_js,
 	demoapp_rules_emailvalidation_js : demoapp_rules_emailvalidation_js,
 	demoapp_rules_logging_loglevels_js : demoapp_rules_logging_loglevels_js,
 	demoapp_rules_logging_settracecategories_js : demoapp_rules_logging_settracecategories_js,
@@ -177,10 +212,9 @@ module.exports = {
 	demoapp_rules_service_initialize_js : demoapp_rules_service_initialize_js,
 	demoapp_services_com_sap_edm_sampleservice_v4_service : demoapp_services_com_sap_edm_sampleservice_v4_service,
 	demoapp_styles_styles_css : demoapp_styles_styles_css,
+	demoapp_styles_styles_json : demoapp_styles_styles_json,
 	demoapp_styles_styles_less : demoapp_styles_styles_less,
-	demoapp_styles_styles_light_css : demoapp_styles_styles_light_css,
-	demoapp_styles_styles_light_json : demoapp_styles_styles_light_json,
-	demoapp_styles_styles_light_nss : demoapp_styles_styles_light_nss,
+	demoapp_styles_styles_nss : demoapp_styles_styles_nss,
 	tsconfig_json : tsconfig_json,
 	version_mdkbundlerversion : version_mdkbundlerversion
 }
@@ -440,6 +474,57 @@ function ResetAppSettingsAndLogout(clientAPI) {
     // Logout 
     return clientAPI.getPageProxy().executeAction('/DemoApp/Actions/Application/Reset.action');
   }
+}
+
+/***/ }),
+
+/***/ "./build.definitions/DemoApp/Rules/CustomerOrderCount.js":
+/*!***************************************************************!*\
+  !*** ./build.definitions/DemoApp/Rules/CustomerOrderCount.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ CustomerOrderCount)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function CustomerOrderCount(clientAPI) {
+  const currentCustomer = clientAPI.getPageProxy().binding['@odata.readLink'];
+  return clientAPI.count('/DemoApp/Services/com_sap_edm_sampleservice_v4.service', currentCustomer + '/SalesOrders', '').then(count => {
+    return count;
+  });
+}
+
+/***/ }),
+
+/***/ "./build.definitions/DemoApp/Rules/CustomersDeleteConfirmation.js":
+/*!************************************************************************!*\
+  !*** ./build.definitions/DemoApp/Rules/CustomersDeleteConfirmation.js ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ CustomersDeleteConfirmation)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function CustomersDeleteConfirmation(clientAPI) {
+  return clientAPI.executeAction('/DemoApp/Actions/CustomerDelete.action').then(result => {
+    if (result.data) {
+      return clientAPI.executeAction('/DemoApp/Actions/CustomersDeleteEntity.action').then(success => Promise.resolve(success), failure => Promise.reject('Delete entity failed ' + failure));
+    } else {
+      return Promise.reject('User Deferred');
+    }
+  });
 }
 
 /***/ }),
@@ -824,7 +909,7 @@ Examples:
 @mdkRed1: #ff0000;
 
 //// By-Type style: All Pages in the application will now have a yellow background
-Page
+div.MDKPage
 
 { background-color: @mdkYellow1; }
 //// By-Name style: All Buttons with _Name == "BlueButton" will now have this style
@@ -837,7 +922,7 @@ Page
 
 { color: @mdkYellow1; background-color: @mdkRed1; }
 */
-`, "",{"version":3,"sources":["webpack://./build.definitions/DemoApp/Styles/Styles.css"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;;;;;CAoBC","sourcesContent":["/* The LESS stylesheet provides the ability to define styling styles that can be used to style the UI in the MDK app.\n\nExamples:\n\n@mdkYellow1: #ffbb33;\n@mdkRed1: #ff0000;\n\n//// By-Type style: All Pages in the application will now have a yellow background\nPage\n\n{ background-color: @mdkYellow1; }\n//// By-Name style: All Buttons with _Name == \"BlueButton\" will now have this style\n#BlueButton\n\n{ color: @mdkYellow1; background-color: #0000FF; }\n//// By-Class style: These style classes can be referenced from rules and set using ClientAPI setStyle function\n\n.MyButton\n\n{ color: @mdkYellow1; background-color: @mdkRed1; }\n*/\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./build.definitions/DemoApp/Styles/Styles.css"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;;;;;CAoBC","sourcesContent":["/* The LESS stylesheet provides the ability to define styling styles that can be used to style the UI in the MDK app.\n\nExamples:\n\n@mdkYellow1: #ffbb33;\n@mdkRed1: #ff0000;\n\n//// By-Type style: All Pages in the application will now have a yellow background\ndiv.MDKPage\n\n{ background-color: @mdkYellow1; }\n//// By-Name style: All Buttons with _Name == \"BlueButton\" will now have this style\n#BlueButton\n\n{ color: @mdkYellow1; background-color: #0000FF; }\n//// By-Class style: These style classes can be referenced from rules and set using ClientAPI setStyle function\n\n.MyButton\n\n{ color: @mdkYellow1; background-color: @mdkRed1; }\n*/\n"],"sourceRoot":""}]);
 // Exports
 module.exports = ___CSS_LOADER_EXPORT___;
 
@@ -882,28 +967,10 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ "./build.definitions/DemoApp/Styles/Styles.light.css":
-/*!***********************************************************!*\
-  !*** ./build.definitions/DemoApp/Styles/Styles.light.css ***!
-  \***********************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-// Imports
-var ___CSS_LOADER_API_SOURCEMAP_IMPORT___ = __webpack_require__(/*! ../../../../../../../css-loader/dist/runtime/sourceMaps.js */ "../../../../css-loader/dist/runtime/sourceMaps.js");
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../../../css-loader/dist/runtime/api.js */ "../../../../css-loader/dist/runtime/api.js");
-var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ``, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
-// Exports
-module.exports = ___CSS_LOADER_EXPORT___;
-
-
-/***/ }),
-
-/***/ "./build.definitions/DemoApp/Styles/Styles.light.nss":
-/*!***********************************************************!*\
-  !*** ./build.definitions/DemoApp/Styles/Styles.light.nss ***!
-  \***********************************************************/
+/***/ "./build.definitions/DemoApp/Styles/Styles.nss":
+/*!*****************************************************!*\
+  !*** ./build.definitions/DemoApp/Styles/Styles.nss ***!
+  \*****************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // Imports
@@ -1075,7 +1142,17 @@ module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":true,"_Type
   \*******************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"_Type":"Section.Type.ObjectHeader","_Name":"SectionObjectHeader0","ObjectHeader":{"Subhead":"{FirstName}","Footnote":"{EmailAddress}","Description":"{CustomerID}","StatusText":"{PhoneNumber}","DetailImage":"sap-icon://customer","DetailImageIsCircular":false,"BodyText":"{DateOfBirth}","HeadlineText":"{LastName}","StatusPosition":"Stacked","StatusImagePosition":"Leading","SubstatusImagePosition":"Leading"},"Visible":true},{"_Type":"Section.Type.KeyValue","_Name":"SectionKeyValue0","Visible":true,"EmptySection":{"FooterVisible":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"KeyAndValues":[{"Value":"{HouseNumber} {Street}","_Type":"KeyValue.Type.Item","_Name":"KeyValue0","KeyName":"Address","Visible":true},{"Value":"{City}","_Type":"KeyValue.Type.Item","_Name":"KeyValue1","KeyName":"City","Visible":true},{"Value":"{PostalCode}","_Type":"KeyValue.Type.Item","_Name":"KeyValue2","KeyName":"Postal Code","Visible":true},{"Value":"{Country}","_Type":"KeyValue.Type.Item","_Name":"KeyValue3","KeyName":"Country","Visible":true}],"MaxItemCount":1,"Layout":{"NumberOfColumns":2}}],"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"}}],"_Type":"Page","_Name":"Customer","ActionBar":{"Items":[{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Edit","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/DemoApp/Actions/NavToCustomerEdit.action"}],"_Name":"ActionBar0","_Type":"Control.Type.ActionBar","Caption":"Customer Details"},"DesignTimeTarget":{"Service":"/DemoApp/Services/com_sap_edm_sampleservice_v4.service","EntitySet":"Customers"}}
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"ObjectHeader":{"Subhead":"{FirstName}","Footnote":"{EmailAddress}","Description":"{CustomerID}","StatusText":"{PhoneNumber}","DetailImage":"sap-icon://customer","DetailImageIsCircular":false,"BodyText":"{DateOfBirth}","HeadlineText":"{LastName}","StatusPosition":"Stacked","StatusImagePosition":"Leading","SubstatusImagePosition":"Leading"},"_Type":"Section.Type.ObjectHeader","_Name":"SectionObjectHeader0","Visible":true},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"KeyAndValues":[{"Value":"{HouseNumber} {Street}","_Type":"KeyValue.Type.Item","_Name":"KeyValue0","KeyName":"Address","Visible":true},{"Value":"{City}","_Type":"KeyValue.Type.Item","_Name":"KeyValue1","KeyName":"City","Visible":true},{"Value":"{PostalCode}","_Type":"KeyValue.Type.Item","_Name":"KeyValue2","KeyName":"Postal Code","Visible":true},{"Value":"{Country}","_Type":"KeyValue.Type.Item","_Name":"KeyValue3","KeyName":"Country","Visible":true}],"MaxItemCount":1,"_Type":"Section.Type.KeyValue","_Name":"SectionKeyValue0","Visible":true,"EmptySection":{"FooterVisible":false},"Layout":{"NumberOfColumns":2}},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Grouping":{"GroupingProperties":[],"Header":{"Items":[]}},"_Type":"Section.Type.ObjectTable","DataSubscriptions":["SalesOrderHeaders"],"Target":{"Service":"/DemoApp/Services/com_sap_edm_sampleservice_v4.service","EntitySet":"{@odata.readLink}/SalesOrders","QueryOptions":"$top=5&$orderby=CreatedAt desc"},"_Name":"SectionObjectTable0","Header":{"_Type":"SectionCommon.Type.Header","_Name":"SectionCommonTypeHeader0","AccessoryType":"None","UseTopPadding":true,"Caption":"Customer Orders"},"Footer":{"_Type":"SectionCommon.Type.Footer","_Name":"SectionCommonTypeFooter0","Caption":"See All","AttributeLabel":"/DemoApp/Rules/CustomerOrderCount.js","AccessoryType":"DisclosureIndicator","FooterStyle":"Attribute","Visible":true,"OnPress":{"Name":"/DemoApp/Actions/GenericNavigation.action","Properties":{"PageToOpen":"/DemoApp/Pages/CustomerOrders.page"}},"UseBottomPadding":false},"Visible":true,"EmptySection":{"Caption":"No Customer Orders Found","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true,"LeadingItems":[],"TrailingItems":[],"_Type":"ObjectCell.Type.ContextMenu"},"Title":"$(D,{CreatedAt},'','',{format:'medium'})","Subhead":"{CustomerID}","DisplayDescriptionInMobile":true,"StatusText":"$(C,{GrossAmount},{CurrencyCode},'',{minimumIntegerDigits:1,minimumFractionDigits:0,maximumFractionDigits:2,useGrouping:true})","PreserveIconStackSpacing":true,"AccessoryType":"DisclosureIndicator","Tags":[],"AvatarStack":{"Avatars":[],"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"Avatars":[],"ImageIsCircular":true},"OnPress":{"Name":"/DemoApp/Actions/GenericNavigation.action","Properties":{"PageToOpen":"/DemoApp/Pages/CustomerOrder.page"}},"_Type":"ObjectTable.Type.ObjectCell","Selected":false},"Search":{"Enabled":true,"BarcodeScanner":true},"DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"HighlightSelectedItem":false,"Selection":{"ExitOnLastDeselect":true,"LongPressToEnable":"None","Mode":"None"}}]}],"DesignTimeTarget":{"Service":"/DemoApp/Services/com_sap_edm_sampleservice_v4.service","EntitySet":"Customers"},"_Type":"Page","_Name":"Customer","ActionBar":{"Items":[{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Edit","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/DemoApp/Actions/NavToCustomerEdit.action"},{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem1","Caption":"Item","SystemItem":"Trash","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/DemoApp/Rules/CustomersDeleteConfirmation.js"}],"_Name":"ActionBar0","_Type":"Control.Type.ActionBar","Caption":"Customer Details"},"FioriToolbar":{"_Type":"Control.Type.FioriToolbar","_Name":"FioriToolbar0","Items":[{"_Type":"FioriToolbarItem.Type.Button","_Name":"ToolbarItem0","Visible":true,"Title":"Create Order","OnPress":{"Name":"/DemoApp/Actions/GenericNavigation.action","Properties":{"PageToOpen":"/DemoApp/Pages/OrderCreate.page","ModalPage":true}},"Enabled":true,"ButtonType":"Primary","Semantic":"Tint","ImagePosition":"Leading"}]}}
+
+/***/ }),
+
+/***/ "./build.definitions/DemoApp/Pages/CustomerCreate.page":
+/*!*************************************************************!*\
+  !*** ./build.definitions/DemoApp/Pages/CustomerCreate.page ***!
+  \*************************************************************/
+/***/ ((module) => {
+
+module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Visible":true,"EmptySection":{"FooterVisible":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0","Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateFirstName","RequiredIndicator":false,"IsVisible":true,"Separator":true,"Caption":"First Name","PlaceHolder":"Enter Value","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateLastName","RequiredIndicator":false,"IsVisible":true,"Separator":true,"Caption":"Last Name","PlaceHolder":"Enter Value","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreatePhone","RequiredIndicator":false,"IsVisible":true,"Separator":true,"Caption":"Phone","PlaceHolder":"Enter Value","KeyboardType":"Phone","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateEmail","RequiredIndicator":false,"IsVisible":true,"Separator":true,"Caption":"Email","PlaceHolder":"Enter Value","KeyboardType":"Email","Enabled":true,"IsEditable":true},{"Value":"Enter Date","_Type":"Control.Type.FormCell.DatePicker","_Name":"FCCreateDOB","RequiredIndicator":false,"IsVisible":true,"Separator":true,"Caption":"DOB","IsEditable":true,"Mode":"Datetime"}],"Layout":{"NumberOfColumns":1}}],"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"}}],"_Type":"Page","_Name":"CustomerCreate","ActionBar":{"Items":[{"_Type":"Control.Type.ActionBarItem","_Name":"CancelCreate","Caption":"Item","SystemItem":"Cancel","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/DemoApp/Actions/CloseModalPage_Cancel.action"},{"_Type":"Control.Type.ActionBarItem","_Name":"SaveCreate","Caption":"Item","SystemItem":"Save","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/DemoApp/Actions/CustomersCreateEntity.action"}],"_Name":"ActionBar0","_Type":"Control.Type.ActionBar","Caption":"Create Customer"}}
 
 /***/ }),
 
@@ -1089,13 +1166,33 @@ module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"Se
 
 /***/ }),
 
+/***/ "./build.definitions/DemoApp/Pages/CustomerOrder.page":
+/*!************************************************************!*\
+  !*** ./build.definitions/DemoApp/Pages/CustomerOrder.page ***!
+  \************************************************************/
+/***/ ((module) => {
+
+module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"_Type":"Section.Type.KeyValue","_Name":"SectionKeyValue0","Visible":true,"EmptySection":{"FooterVisible":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"KeyAndValues":[{"Value":"{SalesOrderID}","_Type":"KeyValue.Type.Item","_Name":"KeyValue0","KeyName":"Order Number","Visible":true},{"Value":"{LifeCycleStatusName}","_Type":"KeyValue.Type.Item","_Name":"KeyValue1","KeyName":"Status","Visible":true},{"Value":"{CreatedAt}","_Type":"KeyValue.Type.Item","_Name":"KeyValue2","KeyName":"Created At","Visible":true},{"Value":"{NetAmount}","_Type":"KeyValue.Type.Item","_Name":"KeyValue3","KeyName":"Net Amount","Visible":true},{"Value":"{TaxAmount}","_Type":"KeyValue.Type.Item","_Name":"KeyValue4","KeyName":"Tax Amount","Visible":true},{"Value":"{GrossAmount}","_Type":"KeyValue.Type.Item","_Name":"KeyValue5","KeyName":"Total Amount","Visible":true}],"MaxItemCount":1,"Layout":{"NumberOfColumns":2}}],"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"}}],"_Type":"Page","_Name":"CustomerOrder","ActionBar":{"Items":[],"_Name":"ActionBar1","_Type":"Control.Type.ActionBar","Caption":"Customer Order Details"},"DesignTimeTarget":{"Service":"/DemoApp/Services/com_sap_edm_sampleservice_v4.service","EntitySet":"SalesOrderHeaders"}}
+
+/***/ }),
+
+/***/ "./build.definitions/DemoApp/Pages/CustomerOrders.page":
+/*!*************************************************************!*\
+  !*** ./build.definitions/DemoApp/Pages/CustomerOrders.page ***!
+  \*************************************************************/
+/***/ ((module) => {
+
+module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"_Type":"Section.Type.ObjectTable","Target":{"Service":"/DemoApp/Services/com_sap_edm_sampleservice_v4.service","EntitySet":"SalesOrderHeaders","QueryOptions":"$filter=CustomerID eq {CustomerID}&$orderby=CreatedAt desc"},"_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"No Orders Found","FooterVisible":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"ObjectCell":{"Title":"$(D,{CreatedAt},'','',{format:'medium'})","Subhead":"{CustomerID}","DisplayDescriptionInMobile":true,"StatusText":"$(C,{GrossAmount},{CurrencyCode},'',{minimumIntegerDigits:1,minimumFractionDigits:0,maximumFractionDigits:2,useGrouping:true})","PreserveIconStackSpacing":false,"AccessoryType":"DisclosureIndicator","Tags":[],"AvatarStack":{"Avatars":[],"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"Avatars":[],"ImageIsCircular":true},"OnPress":{"Name":"/DemoApp/Actions/GenericNavigation.action","Properties":{"PageToOpen":"/DemoApp/Pages/CustomerOrder.page"}},"_Type":"ObjectTable.Type.ObjectCell","Selected":false,"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true,"LeadingItems":[],"TrailingItems":[],"_Type":"ObjectCell.Type.ContextMenu"}},"Search":{"Enabled":true,"BarcodeScanner":true},"DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"Grouping":{"GroupingProperties":[],"Header":{"Items":[]}},"HighlightSelectedItem":false,"Selection":{"ExitOnLastDeselect":true,"LongPressToEnable":"None","Mode":"None"}}],"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"}}],"_Type":"Page","_Name":"CustomerOrders","ActionBar":{"Items":[],"_Name":"ActionBar1","_Type":"Control.Type.ActionBar","Caption":"Customer Orders"}}
+
+/***/ }),
+
 /***/ "./build.definitions/DemoApp/Pages/Customers.page":
 /*!********************************************************!*\
   !*** ./build.definitions/DemoApp/Pages/Customers.page ***!
   \********************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"_Type":"Section.Type.ContactCell","Target":{"Service":"/DemoApp/Services/com_sap_edm_sampleservice_v4.service","EntitySet":"Customers"},"_Name":"SectionContactCell0","Visible":true,"EmptySection":{"FooterVisible":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"ContactCell":{"Visible":true,"DetailImage":"","Headline":"{LastName}","Subheadline":"{FirstName}","Description":"{City}","OnPress":"/DemoApp/Actions/NavToCustomer.action","ActivityItems":[{"_Name":"SectionContactCell0ActivityItems0","ActivityType":"Phone","ActivityValue":"{PhoneNumber}"},{"_Name":"SectionContactCell0ActivityItems1","ActivityType":"Email","ActivityValue":"{EmailAddress}"}],"ContextMenu":{"PerformFirstActionWithFullSwipe":true}},"DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"Search":{"Enabled":true,"BarcodeScanner":true}}],"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"}}],"_Type":"Page","_Name":"Customers","ActionBar":{"Items":[],"_Name":"ActionBar1","_Type":"Control.Type.ActionBar","Caption":"Custormers"}}
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ContactCell","Target":{"Service":"/DemoApp/Services/com_sap_edm_sampleservice_v4.service","EntitySet":"Customers"},"_Name":"SectionContactCell0","Visible":true,"EmptySection":{"FooterVisible":false},"ContactCell":{"Visible":true,"DetailImage":"","Headline":"{LastName}","Subheadline":"{FirstName}","Description":"{City}","OnPress":"/DemoApp/Actions/NavToCustomer.action","ActivityItems":[{"_Name":"SectionContactCell0ActivityItems0","ActivityType":"Phone","ActivityValue":"{PhoneNumber}"},{"_Name":"SectionContactCell0ActivityItems1","ActivityType":"Email","ActivityValue":"{EmailAddress}"}],"ContextMenu":{"PerformFirstActionWithFullSwipe":true}},"DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"Search":{"Enabled":true,"BarcodeScanner":true}}]}],"_Type":"Page","_Name":"Customers","ActionBar":{"Items":[{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Add","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/DemoApp/Actions/NavToCustomersCreate.action"}],"_Name":"ActionBar1","_Type":"Control.Type.ActionBar","Caption":"Custormers"}}
 
 /***/ }),
 
@@ -1129,13 +1226,23 @@ module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Typ
 
 /***/ }),
 
+/***/ "./build.definitions/DemoApp/Pages/OrderCreate.page":
+/*!**********************************************************!*\
+  !*** ./build.definitions/DemoApp/Pages/OrderCreate.page ***!
+  \**********************************************************/
+/***/ ((module) => {
+
+module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Visible":true,"EmptySection":{"FooterVisible":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0","Controls":[{"Value":"EUR","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateCurrencyCode","RequiredIndicator":false,"IsVisible":true,"Separator":true,"Caption":"Currency Code","PlaceHolder":"PlaceHolder","Enabled":true,"IsEditable":true},{"Value":"18.010","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateNetAmount","RequiredIndicator":false,"IsVisible":true,"Separator":true,"Caption":"Net Amount","PlaceHolder":"PlaceHolder","Enabled":true,"IsEditable":true},{"Value":"108.010","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateTaxAmount","RequiredIndicator":false,"IsVisible":true,"Separator":true,"Caption":"Tax Amount","PlaceHolder":"PlaceHolder","Enabled":true,"IsEditable":true},{"Value":"126.02","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateGrossAmount","RequiredIndicator":false,"IsVisible":true,"Separator":true,"Caption":"Gross Amount","PlaceHolder":"PlaceHolder","Enabled":true,"IsEditable":true},{"Value":"N","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateLifeCycleStatus","RequiredIndicator":false,"IsVisible":true,"Separator":true,"Caption":"Lifecycle Status","PlaceHolder":"PlaceHolder","Enabled":true,"IsEditable":true},{"Value":"New","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateLifeCycleStatusName","RequiredIndicator":false,"IsVisible":true,"Separator":true,"Caption":"Lifecycle Status Name","PlaceHolder":"PlaceHolder","Enabled":true,"IsEditable":true},{"Value":"Enter Date","_Type":"Control.Type.FormCell.DatePicker","_Name":"FCCreatedate","RequiredIndicator":false,"IsVisible":true,"Separator":true,"Caption":"\tCreation Date","IsEditable":true,"Mode":"Datetime"}],"Layout":{"NumberOfColumns":1}}],"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"}}],"_Type":"Page","_Name":"OrderCreate","ActionBar":{"Items":[{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"Visible":true,"OnPress":"/DemoApp/Actions/CloseModalPage_Cancel.action"},{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem1","Caption":"Item","SystemItem":"Save","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/DemoApp/Actions/SalesOrderHeadersCreateEntity.action"}],"_Name":"ActionBar0","_Type":"Control.Type.ActionBar","Caption":"Create Order"}}
+
+/***/ }),
+
 /***/ "./build.definitions/Application.app":
 /*!*******************************************!*\
   !*** ./build.definitions/Application.app ***!
   \*******************************************/
 /***/ ((module) => {
 
-module.exports = {"_Name":"DemoApp","Version":"/DemoApp/Globals/Application/AppDefinition_Version.global","MainPage":"/DemoApp/Pages/Main.page","OnLaunch":"/DemoApp/Rules/Service/Initialize.js","OnWillUpdate":"/DemoApp/Rules/Application/OnWillUpdate.js","OnDidUpdate":"/DemoApp/Rules/Service/Initialize.js","Styles":"/DemoApp/Styles/Styles.css","Localization":"/DemoApp/i18n/i18n.properties","_SchemaVersion":"25.9","StyleSheets":{"Styles":{"css":"/DemoApp/Styles/Styles.light.css","ios":"/DemoApp/Styles/Styles.light.nss","android":"/DemoApp/Styles/Styles.light.json"}},"SDKStyles":{"ios":"/DemoApp/Styles/Styles.light.nss","android":"/DemoApp/Styles/Styles.light.json"}}
+module.exports = {"_Name":"DemoApp","Version":"/DemoApp/Globals/Application/AppDefinition_Version.global","MainPage":"/DemoApp/Pages/Main.page","OnLaunch":"/DemoApp/Rules/Service/Initialize.js","OnWillUpdate":"/DemoApp/Rules/Application/OnWillUpdate.js","OnDidUpdate":"/DemoApp/Rules/Service/Initialize.js","Styles":"/DemoApp/Styles/Styles.less","Localization":"/DemoApp/i18n/i18n.properties","_SchemaVersion":"25.9","StyleSheets":{"Styles":{"css":"/DemoApp/Styles/Styles.css","ios":"/DemoApp/Styles/Styles.nss","android":"/DemoApp/Styles/Styles.json"}}}
 
 /***/ }),
 
@@ -1289,6 +1396,46 @@ module.exports = {"_Type":"Action.Type.ClosePage"}
 
 /***/ }),
 
+/***/ "./build.definitions/DemoApp/Actions/CreateCustomerEntityFailureMessage.action":
+/*!*************************************************************************************!*\
+  !*** ./build.definitions/DemoApp/Actions/CreateCustomerEntityFailureMessage.action ***!
+  \*************************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.Message","ActionResult":{"_Name":"CreateCustomerEntityFailureMessage"},"Message":"Failed to Create Customer record - {#ActionResults:CustomersCreateEntity/error}","Title":"Create Customer","OKCaption":"OK"}
+
+/***/ }),
+
+/***/ "./build.definitions/DemoApp/Actions/CustomerDelete.action":
+/*!*****************************************************************!*\
+  !*** ./build.definitions/DemoApp/Actions/CustomerDelete.action ***!
+  \*****************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.Message","ActionResult":{"_Name":"CustomerDelete"},"Message":"Delete current entity?","Title":"Delete Confirmation","OKCaption":"OK","CancelCaption":"Cancel"}
+
+/***/ }),
+
+/***/ "./build.definitions/DemoApp/Actions/CustomersCreateEntity.action":
+/*!************************************************************************!*\
+  !*** ./build.definitions/DemoApp/Actions/CustomersCreateEntity.action ***!
+  \************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.ODataService.CreateEntity","ActionResult":{"_Name":"CustomersCreateEntity"},"OnFailure":"/DemoApp/Actions/CreateCustomerEntityFailureMessage.action","OnSuccess":"/DemoApp/Actions/CloseModalPage_Complete.action","Target":{"Service":"/DemoApp/Services/com_sap_edm_sampleservice_v4.service","EntitySet":"Customers"},"Properties":{"DateOfBirth":"#Page:CustomerCreate/#Control:FCCreateDOB/#Value","EmailAddress":"#Page:CustomerCreate/#Control:FCCreateEmail/#Value","FirstName":"#Page:CustomerCreate/#Control:FCCreateFirstName/#Value","LastName":"#Page:CustomerCreate/#Control:FCCreateLastName/#Value","PhoneNumber":"#Page:CustomerCreate/#Control:FCCreatePhone/#Value"}}
+
+/***/ }),
+
+/***/ "./build.definitions/DemoApp/Actions/CustomersDeleteEntity.action":
+/*!************************************************************************!*\
+  !*** ./build.definitions/DemoApp/Actions/CustomersDeleteEntity.action ***!
+  \************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.ODataService.DeleteEntity","ActionResult":{"_Name":"CustomersDeleteEntity"},"OnFailure":"/DemoApp/Actions/DeleteCustomerEntityFailureMessage.action","OnSuccess":"/DemoApp/Actions/CloseModalPage_Complete.action","Target":{"Service":"/DemoApp/Services/com_sap_edm_sampleservice_v4.service","EntitySet":"Customers","ReadLink":"{@odata.readLink}"}}
+
+/***/ }),
+
 /***/ "./build.definitions/DemoApp/Actions/CustomersUpdateEntity.action":
 /*!************************************************************************!*\
   !*** ./build.definitions/DemoApp/Actions/CustomersUpdateEntity.action ***!
@@ -1296,6 +1443,16 @@ module.exports = {"_Type":"Action.Type.ClosePage"}
 /***/ ((module) => {
 
 module.exports = {"_Type":"Action.Type.ODataService.UpdateEntity","ActionResult":{"_Name":"CustomersUpdateEntity"},"OnFailure":"/DemoApp/Actions/UpdateCustomerEntityFailureMessage.action","OnSuccess":"/DemoApp/Actions/CloseModalPage_Complete.action","ValidationRule":"/DemoApp/Rules/EmailValidation.js","Target":{"Service":"/DemoApp/Services/com_sap_edm_sampleservice_v4.service","EntitySet":"Customers","ReadLink":"{@odata.readLink}"},"Properties":{"EmailAddress":"#Page:CustomerEdit/#Control:FCEmail/#Value","FirstName":"#Page:CustomerEdit/#Control:FCFirstName/#Value","LastName":"#Page:CustomerEdit/#Control:FCLastName/#Value","PhoneNumber":"#Page:CustomerEdit/#Control:FCPhone/#Value"}}
+
+/***/ }),
+
+/***/ "./build.definitions/DemoApp/Actions/DeleteCustomerEntityFailureMessage.action":
+/*!*************************************************************************************!*\
+  !*** ./build.definitions/DemoApp/Actions/DeleteCustomerEntityFailureMessage.action ***!
+  \*************************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.Message","ActionResult":{"_Name":"DeleteCustomerEntityFailureMessage"},"Message":"Delete entity failure - #ActionResults:CustomersDeleteEntity/error","Title":"Delete Customer","OKCaption":"OK"}
 
 /***/ }),
 
@@ -1436,6 +1593,26 @@ module.exports = {"_Type":"Action.Type.Navigation","ActionResult":{"_Name":"NavT
 /***/ ((module) => {
 
 module.exports = {"_Type":"Action.Type.Navigation","ActionResult":{"_Name":"NavToCustomers"},"PageToOpen":"/DemoApp/Pages/Customers.page"}
+
+/***/ }),
+
+/***/ "./build.definitions/DemoApp/Actions/NavToCustomersCreate.action":
+/*!***********************************************************************!*\
+  !*** ./build.definitions/DemoApp/Actions/NavToCustomersCreate.action ***!
+  \***********************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.Navigation","ActionResult":{"_Name":"NavToCustomersCreate"},"PageToOpen":"/DemoApp/Pages/CustomerCreate.page","ModalPage":true}
+
+/***/ }),
+
+/***/ "./build.definitions/DemoApp/Actions/SalesOrderHeadersCreateEntity.action":
+/*!********************************************************************************!*\
+  !*** ./build.definitions/DemoApp/Actions/SalesOrderHeadersCreateEntity.action ***!
+  \********************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.ODataService.CreateRelatedEntity","ActionResult":{"_Name":"SalesOrderHeadersCreateEntity"},"OnFailure":{"Name":"/DemoApp/Actions/GenericMessageBox.action","Properties":{"Message":"Failed to Create Sales Order record - {#ActionResults:SalesOrderHeadersCreateEntity/error}","Title":"Create Sales Order","OKCaption":"OK"}},"OnSuccess":"/DemoApp/Actions/CloseModalPage_Complete.action","Target":{"Service":"/DemoApp/Services/com_sap_edm_sampleservice_v4.service","EntitySet":"SalesOrderHeaders"},"ParentLink":{"Target":{"EntitySet":"Customers","ReadLink":"{@odata.readLink}"},"Property":"SalesOrders"},"Properties":{"CreatedAt":"#Page:OrderCreate/#Control:FCCreatedate/#Value","CurrencyCode":"#Page:OrderCreate/#Control:FCCreateCurrencyCode/#Value","GrossAmount":"#Page:OrderCreate/#Control:FCCreateGrossAmount/#Value","LifeCycleStatus":"#Page:OrderCreate/#Control:FCCreateLifeCycleStatus/#Value","LifeCycleStatusName":"#Page:OrderCreate/#Control:FCCreateLifeCycleStatusName/#Value","NetAmount":"#Page:OrderCreate/#Control:FCCreateNetAmount/#Value","TaxAmount":"#Page:OrderCreate/#Control:FCCreateTaxAmount/#Value"}}
 
 /***/ }),
 
@@ -1620,51 +1797,10 @@ module.exports = "1.1\n";
 
 /***/ }),
 
-/***/ "webpack/container/entry/bundle.js":
-/*!***********************!*\
-  !*** container entry ***!
-  \***********************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-var moduleMap = {
-	".": () => {
-		return Promise.resolve().then(() => (() => ((__webpack_require__(/*! ./build.definitions/application-index.js */ "./build.definitions/application-index.js")))));
-	}
-};
-var get = (module, getScope) => {
-	__webpack_require__.R = getScope;
-	getScope = (
-		__webpack_require__.o(moduleMap, module)
-			? moduleMap[module]()
-			: Promise.resolve().then(() => {
-				throw new Error('Module "' + module + '" does not exist in container.');
-			})
-	);
-	__webpack_require__.R = undefined;
-	return getScope;
-};
-var init = (shareScope, initScope) => {
-	if (!__webpack_require__.S) return;
-	var name = "default"
-	var oldScope = __webpack_require__.S[name];
-	if(oldScope && oldScope !== shareScope) throw new Error("Container initialization failed as it has already been initialized with a different share scope");
-	__webpack_require__.S[name] = shareScope;
-	return __webpack_require__.I(name, initScope);
-};
-
-// This exports getters to disallow modifications
-__webpack_require__.d(exports, {
-	get: () => (get),
-	init: () => (init)
-});
-
-/***/ }),
-
-/***/ "./build.definitions/DemoApp/Styles/Styles.light.json":
-/*!************************************************************!*\
-  !*** ./build.definitions/DemoApp/Styles/Styles.light.json ***!
-  \************************************************************/
+/***/ "./build.definitions/DemoApp/Styles/Styles.json":
+/*!******************************************************!*\
+  !*** ./build.definitions/DemoApp/Styles/Styles.json ***!
+  \******************************************************/
 /***/ ((module) => {
 
 "use strict";
@@ -1720,12 +1856,6 @@ module.exports = /*#__PURE__*/JSON.parse('{"compilerOptions":{"module":"esnext",
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = __webpack_module_cache__;
-/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
@@ -1755,62 +1885,15 @@ module.exports = /*#__PURE__*/JSON.parse('{"compilerOptions":{"module":"esnext",
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/sharing */
-/******/ 	(() => {
-/******/ 		__webpack_require__.S = {};
-/******/ 		var initPromises = {};
-/******/ 		var initTokens = {};
-/******/ 		__webpack_require__.I = (name, initScope) => {
-/******/ 			if(!initScope) initScope = [];
-/******/ 			// handling circular init calls
-/******/ 			var initToken = initTokens[name];
-/******/ 			if(!initToken) initToken = initTokens[name] = {};
-/******/ 			if(initScope.indexOf(initToken) >= 0) return;
-/******/ 			initScope.push(initToken);
-/******/ 			// only runs once
-/******/ 			if(initPromises[name]) return initPromises[name];
-/******/ 			// creates a new share scope if needed
-/******/ 			if(!__webpack_require__.o(__webpack_require__.S, name)) __webpack_require__.S[name] = {};
-/******/ 			// runs all init snippets from all modules reachable
-/******/ 			var scope = __webpack_require__.S[name];
-/******/ 			var warn = (msg) => {
-/******/ 				if (typeof console !== "undefined" && console.warn) console.warn(msg);
-/******/ 			};
-/******/ 			var uniqueName = undefined;
-/******/ 			var register = (name, version, factory, eager) => {
-/******/ 				var versions = scope[name] = scope[name] || {};
-/******/ 				var activeVersion = versions[version];
-/******/ 				if(!activeVersion || (!activeVersion.loaded && (!eager != !activeVersion.eager ? eager : uniqueName > activeVersion.from))) versions[version] = { get: factory, from: uniqueName, eager: !!eager };
-/******/ 			};
-/******/ 			var initExternal = (id) => {
-/******/ 				var handleError = (err) => (warn("Initialization of sharing external failed: " + err));
-/******/ 				try {
-/******/ 					var module = __webpack_require__(id);
-/******/ 					if(!module) return;
-/******/ 					var initFn = (module) => (module && module.init && module.init(__webpack_require__.S[name], initScope))
-/******/ 					if(module.then) return promises.push(module.then(initFn, handleError));
-/******/ 					var initResult = initFn(module);
-/******/ 					if(initResult && initResult.then) return promises.push(initResult['catch'](handleError));
-/******/ 				} catch(err) { handleError(err); }
-/******/ 			}
-/******/ 			var promises = [];
-/******/ 			switch(name) {
-/******/ 			}
-/******/ 			if(!promises.length) return initPromises[name] = 1;
-/******/ 			return initPromises[name] = Promise.all(promises).then(() => (initPromises[name] = 1));
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /************************************************************************/
 /******/ 	
-/******/ 	// module cache are used so entry inlining is disabled
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	var __webpack_exports__ = __webpack_require__("webpack/container/entry/bundle.js");
-/******/ 	var __webpack_export_target__ = exports;
-/******/ 	for(var i in __webpack_exports__) __webpack_export_target__[i] = __webpack_exports__[i];
-/******/ 	if(__webpack_exports__.__esModule) Object.defineProperty(__webpack_export_target__, "__esModule", { value: true });
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	var __webpack_exports__ = __webpack_require__("./build.definitions/application-index.js");
 /******/ 	
+/******/ 	return __webpack_exports__;
 /******/ })()
 ;
+});
 //# sourceMappingURL=bundle.js.map
